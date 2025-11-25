@@ -1,0 +1,125 @@
+/* ===== Global ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #eef2f7;
+}
+
+/* ===== Sidebar ===== */
+#sidebar {
+  width: 360px;
+  background: white;
+  padding: 1.3rem;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+#sidebar h2 {
+  font-size: 1.4rem;
+  color: #0d47a1;
+  margin-bottom: 0.7rem;
+}
+
+#sidebar h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #0d47a1;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  margin-top: 0.4rem;
+  color: white;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.primary { background: #1976d2; }
+.success { background: #2e7d32; }
+.danger { background: #c62828; }
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* ===== Info Box ===== */
+#info {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background: #e3f2fd;
+  border-left: 4px solid #1e88e5;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ===== Lists ===== */
+#stops-list,
+#trip-order {
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.stop-item {
+  background: #f5faff;
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 4px;
+  border: 1px solid #dce7f4;
+  border-radius: 6px;
+}
+
+/* ===== Matrix Table ===== */
+#matrix-container {
+  overflow-x: auto;
+  margin-top: 0.4rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+th {
+  background: #e8f1ff;
+  color: #0d47a1;
+}
+
+/* ===== Map ===== */
+#map {
+  flex: 1;
+}
+
+.custom-marker .marker-dot {
+  width: 26px;
+  height: 26px;
+  background: #1976d2;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 2px solid white;
+}

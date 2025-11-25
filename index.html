@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OSRM WebGIS Trip Planner</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <!-- Custom UI -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="sidebar">
+    <h2>OSRM WebGIS Trip Planner</h2>
+    <p>
+      Klik peta untuk menambah waypoint.<br/>
+      Minimal 3 titik untuk trip.
+    </p>
+
+    <div class="block">
+      <label>Profile Routing:
+        <select id="profile">
+          <option value="driving">🚗 Driving (car)</option>
+          <option value="cycling">🚴 Cycling</option>
+          <option value="walking">🚶 Walking</option>
+        </select>
+      </label>
+      <button id="clear" class="danger">Clear All</button>
+    </div>
+
+    <div class="block">
+      <button id="btn-matrix" class="primary">Compute OD Matrix</button>
+      <button id="btn-trip" class="success">Optimize Trip (TSP)</button>
+    </div>
+
+    <div id="info" class="info-box"></div>
+
+    <h3>📍 Stops (Waypoints)</h3>
+    <div id="stops-wrapper">
+      <ol id="stops-list"></ol>
+    </div>
+
+    <h3>📊 OD Matrix (minutes)</h3>
+    <div id="matrix-container"></div>
+
+    <h3>🗺️ Trip Order</h3>
+    <ol id="trip-order"></ol>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
